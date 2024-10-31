@@ -10,7 +10,7 @@ const Nav = () => {
                         <Link to={process.env.PUBLIC_URL + `/`}>Home</Link>
                         <ul>
                             <li><Link to={process.env.PUBLIC_URL + `/`}>Home</Link></li>
-                            <li><Link to={process.env.PUBLIC_URL + `/home-two`}>Home Two</Link></li>
+                            {/* <li><Link to={process.env.PUBLIC_URL + `/home-two`}>Home Two</Link></li> */}
                             <li><Link to={process.env.PUBLIC_URL + `/home-three`}>Home Three</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/home-four`}>Home Four</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/home-five`}>Home Five</Link></li>
