@@ -6,11 +6,11 @@ const Nav = () => {
         <div className="main-menu text-center">
             <nav>
                 <ul className="main-menu__list">
-                    <li className="dropdown current">
+                    {/* <li className="dropdown current">
                         <Link to={process.env.PUBLIC_URL + `/`}>Home</Link>
                         <ul>
                             <li><Link to={process.env.PUBLIC_URL + `/`}>Home</Link></li>
-                            {/* <li><Link to={process.env.PUBLIC_URL + `/home-two`}>Home Two</Link></li> */}
+                            <li><Link to={process.env.PUBLIC_URL + `/home-two`}>Home Two</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/home-three`}>Home Three</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/home-four`}>Home Four</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/home-five`}>Home Five</Link></li>
@@ -25,14 +25,16 @@ const Nav = () => {
                                 </ul>
                             </li>
                         </ul>
-                    </li>
-                    <li className="dropdown">
+                    </li> */}
+                     <li className="current"><Link to={process.env.PUBLIC_URL + `/`}>Home</Link></li>
+                     <li><Link to={process.env.PUBLIC_URL + `/about`}>About</Link></li>
+                    {/* <li className="dropdown">
                         <Link to={process.env.PUBLIC_URL + `#`}>About</Link>
                         <ul>
                             <li><Link to={process.env.PUBLIC_URL + `/about-one`}>About One</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/about-two`}>About Two</Link></li>
                         </ul>
-                    </li>
+                    </li> */}
                     <li className="dropdown">
                         <Link to={process.env.PUBLIC_URL + `#`}>Services</Link>
                         <ul>

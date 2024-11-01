@@ -50,13 +50,15 @@ function App() {
     <Router>
       <ScrollToTopRoute />
         <Routes>
-            <Route path={`${process.env.PUBLIC_URL}/`} exact element={<HomeDefault />} />
+            <Route path={`${process.env.PUBLIC_URL}/`} exact element={<HomeThree />} />
+            <Route path={`${process.env.PUBLIC_URL}/about`} exact element={<AboutTwo />} />
+            {/* <Route path={`${process.env.PUBLIC_URL}/`} exact element={<HomeDefault />} />
             <Route path={`${process.env.PUBLIC_URL}/home-two`} exact element={<HomeTwo />} />
             <Route path={`${process.env.PUBLIC_URL}/home-three`} exact element={<HomeThree />} />
             <Route path={`${process.env.PUBLIC_URL}/home-four`} exact element={<HomeFour />} />
-            <Route path={`${process.env.PUBLIC_URL}/home-five`} exact element={<HomeFive />} />
-            <Route path={`${process.env.PUBLIC_URL}/about-one`} exact element={<AboutOne />} />
-            <Route path={`${process.env.PUBLIC_URL}/about-two`} exact element={<AboutTwo />} />
+            <Route path={`${process.env.PUBLIC_URL}/home-five`} exact element={<HomeFive />} /> */}
+            {/* <Route path={`${process.env.PUBLIC_URL}/about-one`} exact element={<AboutOne />} />
+            <Route path={`${process.env.PUBLIC_URL}/about-two`} exact element={<AboutTwo />} /> */}
             <Route path={`${process.env.PUBLIC_URL}/services`} exact element={<ServicesPage />} />
             <Route path={`${process.env.PUBLIC_URL}/general-contracting`} exact element={<GeneralContracting />} />
             <Route path={`${process.env.PUBLIC_URL}/metrial-managment`} exact element={<MetrialManagment />} />

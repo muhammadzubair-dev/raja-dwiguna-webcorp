@@ -6,51 +6,60 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const menuData = [
+  // {
+  //   title: 'Home',
+  //   path: '/',
+  //   iconClosed: <CgChevronLeft />,
+  //   iconOpened: <CgChevronDown />,
+
+  //   subNav: [
+  //     {
+  //       title: 'Home',
+  //       path: '/',
+  //     },
+  //     {
+  //         title: 'Home Two',
+  //         path: '/home-two',
+  //     },
+  //     {
+  //       title: 'Home Three',
+  //       path: '/home-three',
+  //     },
+  //     {
+  //       title: 'Home Four',
+  //       path: '/home-four',
+  //     },
+  //     {
+  //       title: 'Home Five',
+  //       path: '/home-five',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'About',
+  //   path: '/',
+  //   iconClosed: <CgChevronLeft />,
+  //   iconOpened: <CgChevronDown />,
+
+  //   subNav: [
+  //     {
+  //       title: 'About One',
+  //       path: '/about-one',
+  //     },
+  //     {
+  //       title: 'About Two',
+  //       path: '/about-two',
+  //     },
+  //   ],
+  // },
   {
     title: 'Home',
     path: '/',
-    iconClosed: <CgChevronLeft />,
-    iconOpened: <CgChevronDown />,
-
-    subNav: [
-      {
-        title: 'Home',
-        path: '/',
-      },
-      // {
-      //     title: 'Home Two',
-      //     path: '/home-two',
-      // },
-      {
-        title: 'Home Three',
-        path: '/home-three',
-      },
-      {
-        title: 'Home Four',
-        path: '/home-four',
-      },
-      {
-        title: 'Home Five',
-        path: '/home-five',
-      },
-    ],
   },
+
   {
     title: 'About',
-    path: '/',
-    iconClosed: <CgChevronLeft />,
-    iconOpened: <CgChevronDown />,
-
-    subNav: [
-      {
-        title: 'About One',
-        path: '/about-one',
-      },
-      {
-        title: 'About Two',
-        path: '/about-two',
-      },
-    ],
+    path: '/about',
   },
 
   {
