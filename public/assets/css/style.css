@@ -469,7 +469,7 @@ button {
     height: 70px!important;
     background: var(--thm-base)!important;
     position: fixed!important;
-    bottom: 93px!important;
+    bottom: 100px!important;
     right: 20px!important;
     z-index: 99!important;
     border-top-left-radius: 10px!important;
@@ -478,6 +478,15 @@ button {
     transition: all 0.4s ease!important;
     transition: all 0.4s ease!important;
     overflow: hidden!important;
+}
+
+.whatsapp {
+    position: fixed!important;
+    display: inline-block!important;
+    width: 70px!important;
+    bottom: 20px!important;
+    right: 20px!important;
+    z-index: 99!important;
 }
 
 .scroll-to-top svg {
