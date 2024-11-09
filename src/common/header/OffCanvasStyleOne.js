@@ -11,7 +11,7 @@ function OffCanvasStyleOne() {
   return (
     <>
       <div className="side-content-button">
-        <Link
+        {/* <Link
           to="#"
           variant="primary"
           className="navSidebar-button"
@@ -20,7 +20,7 @@ function OffCanvasStyleOne() {
           <span className="decor"></span>
           <span className="decor"></span>
           <span className="decor"></span>
-        </Link>
+        </Link> */}
 
         <Offcanvas
           show={show}

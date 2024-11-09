@@ -1996,6 +1996,7 @@ a.sc-hLBbgP {
 .slider-one-sec {
     position: relative;
     display: block;
+    /* padding-bottom: 90px; */
 }
 
 .slider-one__single {
@@ -2702,7 +2703,7 @@ a.sc-hLBbgP {
 .services-one-sec {
     position: relative;
     display: block;
-    padding: 0px 0px 90px;
+    padding: 90px 0px 0px 0px;
     z-index: 1;
 }
 
@@ -2841,7 +2842,7 @@ a.sc-hLBbgP {
     position: relative;
     display: block;
     background: #ffffff;
-    padding: 0px 0px 114px;
+    padding: 90px 0px;
     z-index: 1;
 }
 
@@ -4346,16 +4347,24 @@ a.sc-hLBbgP {
 
 .footer-widget__about {
     position: relative;
-    display: block;
-    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    /* max-width: 300px; */
     margin-top: 8px;
     width: 100%;
+}
+
+@media (max-width: 800px) {
+    .footer-widget__about {
+        flex-direction: column;
+    }
 }
 
 .footer-widget__about-logo {
     position: relative;
     display: block;
-    margin-bottom: 52px;
+    /* margin-bottom: 52px; */
 }
 
 .footer-widget__about-logo a {

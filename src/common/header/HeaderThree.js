@@ -31,7 +31,7 @@ const HeaderThree = () => {
                       </div>
                     </li>
 
-                    <li>
+                    {/* <li>
                       <div className="icon">
                         <span className="icon-email"></span>
                       </div>
@@ -44,7 +44,7 @@ const HeaderThree = () => {
                           </a>
                         </p>
                       </div>
-                    </li>
+                    </li> */}
 
                     <li>
                       <div className="icon">
@@ -52,7 +52,7 @@ const HeaderThree = () => {
                       </div>
 
                       <div className="text">
-                        <span>Free Contact</span>
+                        <span>Contact</span>
                         <p className="number">
                           <a href="tel:6287886674010">02-425-562-2457</a>
                         </p>
@@ -61,9 +61,9 @@ const HeaderThree = () => {
                   </ul>
                 </div>
 
-                <div className="main-header-one__right">
+                {/* <div className="main-header-one__right">
                   <OffCanvasStyleOne />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ const HeaderThree = () => {
                 </div>
 
                 <div className="main-header-one__bottom-right">
-                  <div className="search-box">
+                  {/* <div className="search-box">
                     <SearchButton />
                   </div>
 
@@ -93,16 +93,16 @@ const HeaderThree = () => {
                       <span className="icon-shopping-bag-1"></span>
                       <span className="count">0</span>
                     </Link>
-                  </div>
+                  </div> */}
 
                   <div className="main-header-one__bottom-right-btn">
-                    <Link
-                      to={process.env.PUBLIC_URL + `/`}
+                    <a
+                      href="#service-one"
                       className="thm-btn"
                       data-text="Get Started +"
                     >
-                      Get Started +
-                    </Link>
+                      Get Started ++
+                    </a>
                   </div>
                 </div>
               </div>

@@ -47,7 +47,7 @@ function App() {
   }, []);
   return (
     <Router>
-      <ScrollToTopRoute />
+      {/* <ScrollToTopRoute /> */}
       <Routes>
         <Route
           path={`${process.env.PUBLIC_URL}/`}
@@ -163,12 +163,12 @@ function App() {
         />
         <Route path={`${process.env.PUBLIC_URL}/*`} exact element={<Error />} />
       </Routes>
-      <ScrollToTop
+      {/* <ScrollToTop
         className="scrollUp"
         smooth
         top="1500"
         component={<FaAngleUp />}
-      />
+      /> */}
       <a
         target="_blank"
         href="https://api.whatsapp.com/send?phone=6287886674010"

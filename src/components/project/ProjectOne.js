@@ -74,7 +74,7 @@ export default class ProjectOne extends React.Component {
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
-                <section className="project-one-sec">
+                <section className="project-one-sec" id="project-one">
                     <div className="shape1"><img src={publicUrl+"assets/images/shapes/project-v1-shape1.png"} alt="" /></div>
                     <div className="shape2"><img src={publicUrl+"assets/images/shapes/project-v1-shape2.png"} alt="" /></div>
                     <div className="container-fluid">

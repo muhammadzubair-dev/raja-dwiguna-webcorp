@@ -1,4 +1,5 @@
 import React from 'react';
+import SmoothScroll from 'smooth-scroll';
 import HeaderThree from '../common/header/HeaderThree';
 import HeroThree from '../components/hero/HeroThree';
 import FeatureOne from '../components/features/FeatureOne';
@@ -10,27 +11,32 @@ import WorkPerformanceOne from '../components/work-performance/WorkPerformanceOn
 import FeatureFive from '../components/features/FeatureFive';
 import TestimonialOne from '../components/testimonial/TestimonialOne';
 import BlogThree from '../components/blog/BlogThree';
-import BrandOne from "../components/brand/BrandOne";
+import BrandOne from '../components/brand/BrandOne';
 import FooterOne from '../common/footer/FooterOne';
 
+export const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 300,
+  speedAsDuration: true,
+});
+
 const HomeThree = () => {
-    return (
-        <>
-            <HeaderThree />
-            <HeroThree />
-            <FeatureOne />
-            <ServiceOne />
-            <AboutOne />
-            <ProjectOne />
-            <WhyChooseOne />
-            <WorkPerformanceOne />
-            <FeatureFive />
-            <TestimonialOne />
-            <BlogThree />
-            <BrandOne />
-            <FooterOne />
-        </>
-    )
-}
+  return (
+    <>
+      <HeaderThree />
+      <HeroThree />
+      {/* <FeatureOne /> */}
+      <ServiceOne />
+      <AboutOne />
+      <ProjectOne />
+      {/* <WhyChooseOne /> */}
+      {/* <WorkPerformanceOne /> */}
+      {/* <FeatureFive /> */}
+      <BrandOne />
+      <TestimonialOne />
+      {/* <BlogThree /> */}
+      <FooterOne />
+    </>
+  );
+};
 
 export default HomeThree;

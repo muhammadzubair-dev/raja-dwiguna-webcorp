@@ -51,9 +51,9 @@ export default class HeroOne extends React.Component {
                                             <h2>We build something new <br /> and consistent.</h2>
                                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br /> officia
                                                 deserunt mollit anim id est laborum. </p>
-                                            <div className="btn-box">
+                                            {/* <div className="btn-box">
                                                 <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Read More +">Read More +</Link>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -73,9 +73,9 @@ export default class HeroOne extends React.Component {
                                             <h2>A Modern Construction & <br /> Industrial </h2>
                                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br /> officia
                                                 deserunt mollit anim id est laborum. </p>
-                                            <div className="btn-box">
+                                            {/* <div className="btn-box">
                                                 <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Read More +">Read More +</Link>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -95,9 +95,9 @@ export default class HeroOne extends React.Component {
                                             <h2>Best solution for <br />construction</h2>
                                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br /> officia
                                                 deserunt mollit anim id est laborum. </p>
-                                            <div className="btn-box">
+                                            {/* <div className="btn-box">
                                                 <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Read More +">Read More +</Link>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>

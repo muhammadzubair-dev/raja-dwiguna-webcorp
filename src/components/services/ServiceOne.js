@@ -6,7 +6,7 @@ export default class ServiceOne extends React.Component {
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
-                <section className="services-one-sec">
+                <section className="services-one-sec" id="service-one">
                     <div className="container">
                         <div className="sec-title text-center">
                             <div className="sec-title__tagline">

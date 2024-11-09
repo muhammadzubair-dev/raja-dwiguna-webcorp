@@ -44,7 +44,7 @@ export default class TestimonialOne extends React.Component {
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
-                <section className="testimonials-one-sec">
+                <section className="testimonials-one-sec" id="testimonials-one">
                     <div className="shape1"><img src={publicUrl+"assets/images/shapes/testimonials-v1-shape1.png"} alt="" /></div>
                     <div className="shape2"><img src={publicUrl+"assets/images/shapes/testimonials-v1-shape2.png"} alt="" /></div>
                     <div className="container">

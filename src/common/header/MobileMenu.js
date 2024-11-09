@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const menuData = [
+  { title: 'Services', href: '#service-one' },
+  { title: 'Projects', href: '#project-one' },
+  { title: 'About', href: '#about-one' },
+  { title: 'Testimonials', href: '#testimonials-one' },
   // {
   //   title: 'Home',
   //   path: '/',
@@ -52,138 +56,138 @@ const menuData = [
   //     },
   //   ],
   // },
-  {
-    title: 'Home',
-    path: '/',
-  },
+  // {
+  //   title: 'Home',
+  //   path: '/',
+  // },
 
-  {
-    title: 'About',
-    path: '/about',
-  },
+  // {
+  //   title: 'About',
+  //   path: '/about',
+  // },
 
-  {
-    title: 'Services',
-    path: '#',
+  // {
+  //   title: 'Services',
+  //   path: '#',
 
-    iconClosed: <CgChevronLeft />,
-    iconOpened: <CgChevronDown />,
+  //   iconClosed: <CgChevronLeft />,
+  //   iconOpened: <CgChevronDown />,
 
-    subNav: [
-      {
-        title: 'Services',
-        path: '/services',
-        cName: 'sub-nav',
-      },
-      {
-        title: 'General Contracting',
-        path: '/general-contracting',
-        cName: 'sub-nav',
-      },
-      {
-        title: 'Metrial Managment',
-        path: '/metrial-managment',
-      },
-      {
-        title: 'Building Renovation',
-        path: '/building-renovation',
-      },
-      {
-        title: 'Architecture Design',
-        path: '/architecture-design',
-      },
-      {
-        title: 'Multistory Build',
-        path: '/multistory-build',
-      },
-    ],
-  },
+  //   subNav: [
+  //     {
+  //       title: 'Services',
+  //       path: '/services',
+  //       cName: 'sub-nav',
+  //     },
+  //     {
+  //       title: 'General Contracting',
+  //       path: '/general-contracting',
+  //       cName: 'sub-nav',
+  //     },
+  //     {
+  //       title: 'Metrial Managment',
+  //       path: '/metrial-managment',
+  //     },
+  //     {
+  //       title: 'Building Renovation',
+  //       path: '/building-renovation',
+  //     },
+  //     {
+  //       title: 'Architecture Design',
+  //       path: '/architecture-design',
+  //     },
+  //     {
+  //       title: 'Multistory Build',
+  //       path: '/multistory-build',
+  //     },
+  //   ],
+  // },
 
-  {
-    title: 'Page',
-    path: '#',
+  // {
+  //   title: 'Page',
+  //   path: '#',
 
-    iconClosed: <CgChevronLeft />,
-    iconOpened: <CgChevronDown />,
+  //   iconClosed: <CgChevronLeft />,
+  //   iconOpened: <CgChevronDown />,
 
-    subNav: [
-      {
-        title: 'Portfolio',
-        path: '/portfolio',
-        cName: 'sub-nav',
-      },
-      {
-        title: 'Portfolio Details',
-        path: '/portfolio-details',
-        cName: 'sub-nav',
-      },
-      {
-        title: 'Team',
-        path: '/team',
-      },
-      {
-        title: 'Team Details',
-        path: '/team-details',
-      },
-      {
-        title: 'Testimonials',
-        path: '/testimonials',
-      },
-      {
-        title: 'Pricing',
-        path: '/pricing',
-      },
-      {
-        title: 'FAQ',
-        path: '/faq',
-      },
-      {
-        title: 'Error',
-        path: '/error',
-      },
-    ],
-  },
+  //   subNav: [
+  //     {
+  //       title: 'Portfolio',
+  //       path: '/portfolio',
+  //       cName: 'sub-nav',
+  //     },
+  //     {
+  //       title: 'Portfolio Details',
+  //       path: '/portfolio-details',
+  //       cName: 'sub-nav',
+  //     },
+  //     {
+  //       title: 'Team',
+  //       path: '/team',
+  //     },
+  //     {
+  //       title: 'Team Details',
+  //       path: '/team-details',
+  //     },
+  //     {
+  //       title: 'Testimonials',
+  //       path: '/testimonials',
+  //     },
+  //     {
+  //       title: 'Pricing',
+  //       path: '/pricing',
+  //     },
+  //     {
+  //       title: 'FAQ',
+  //       path: '/faq',
+  //     },
+  //     {
+  //       title: 'Error',
+  //       path: '/error',
+  //     },
+  //   ],
+  // },
 
-  {
-    title: 'Blog',
-    path: '#',
+  // {
+  //   title: 'Blog',
+  //   path: '#',
 
-    iconClosed: <CgChevronLeft />,
-    iconOpened: <CgChevronDown />,
+  //   iconClosed: <CgChevronLeft />,
+  //   iconOpened: <CgChevronDown />,
 
-    subNav: [
-      {
-        title: 'Blog',
-        path: '/blog',
-        cName: 'sub-nav',
-      },
-      {
-        title: 'Blog Grid',
-        path: '/blog-grid',
-        cName: 'sub-nav',
-      },
-      {
-        title: 'Blog List',
-        path: '/blog-list',
-      },
-      {
-        title: 'Blog Standard',
-        path: '/blog-standard',
-      },
-      {
-        title: 'Blog Details',
-        path: '/blog-details',
-      },
-    ],
-  },
+  //   subNav: [
+  //     {
+  //       title: 'Blog',
+  //       path: '/blog',
+  //       cName: 'sub-nav',
+  //     },
+  //     {
+  //       title: 'Blog Grid',
+  //       path: '/blog-grid',
+  //       cName: 'sub-nav',
+  //     },
+  //     {
+  //       title: 'Blog List',
+  //       path: '/blog-list',
+  //     },
+  //     {
+  //       title: 'Blog Standard',
+  //       path: '/blog-standard',
+  //     },
+  //     {
+  //       title: 'Blog Details',
+  //       path: '/blog-details',
+  //     },
+  //   ],
+  // },
 
-  {
-    title: 'Contact',
-    path: '/contact',
-  },
+  // {
+  //   title: 'Contact',
+  //   path: '/contact',
+  // },
 ];
 
-const SidebarLink = styled(Link)`
+const SidebarLink = styled.a`
   display: flex;
   color: #fff;
   justify-content: space-between;
@@ -231,8 +235,9 @@ const SubMenu = ({ item }) => {
   return (
     <>
       <SidebarLink
-        to={process.env.PUBLIC_URL + `${item.path}`}
-        onClick={item.subNav && showSubnav}
+        // to={process.env.PUBLIC_URL + `${item.path}`}
+        // onClick={item.subNav && showSubnav}
+        href={item.href}
       >
         <div>
           {item.icon}

@@ -82,7 +82,7 @@ export default class HeaderOne extends React.Component {
                         </div>
                       </li>
 
-                      <li>
+                      {/* <li>
                         <div className="icon-box">
                           <span className="icon-email"></span>
                         </div>
@@ -94,14 +94,14 @@ export default class HeaderOne extends React.Component {
                             </a>
                           </p>
                         </div>
-                      </li>
+                      </li> */}
 
                       <li>
                         <div className="icon-box">
                           <span className="icon-phone-call"></span>
                         </div>
                         <div className="text-box">
-                          <h3>Free Contact</h3>
+                          <h3>Contact</h3>
                           <p className="number">
                             <a href="tel:6287886674010">02-425-562-2457</a>
                           </p>

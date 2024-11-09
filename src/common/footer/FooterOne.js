@@ -32,7 +32,7 @@ export default class FooterOne extends React.Component {
                   <div className="footer-one__top-inner">
                     <div className="row">
                       <div
-                        className="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp"
+                        className="wow animated fadeInUp"
                         data-wow-delay="0.1s"
                       >
                         <div className="footer-widget__column footer-widget__about">
@@ -47,13 +47,12 @@ export default class FooterOne extends React.Component {
                                 alt="Logo"
                               />
                             </Link>
+                            <p className="footer-widget__about-text">
+                              Duis aute irure dolor in reprehenderit on
+                              voluptate velit esse cillum dolore eu nulla
+                              pariatur. Excepteur sint occaecat
+                            </p>
                           </div>
-
-                          <p className="footer-widget__about-text">
-                            Duis aute irure dolor in reprehenderit on voluptate
-                            velit esse cillum dolore eu nulla pariatur.
-                            Excepteur sint occaecat
-                          </p>
 
                           <div className="footer-widget__about-social-link">
                             <ul>
@@ -89,7 +88,7 @@ export default class FooterOne extends React.Component {
                         </div>
                       </div>
 
-                      <div
+                      {/* <div
                         className="col-xl-2 col-lg-6 col-md-6 wow animated fadeInUp"
                         data-wow-delay="0.3s"
                       >
@@ -223,7 +222,7 @@ export default class FooterOne extends React.Component {
                             </ul>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

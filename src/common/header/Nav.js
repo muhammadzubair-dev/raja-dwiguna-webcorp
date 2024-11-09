@@ -26,8 +26,11 @@ const Nav = () => {
                             </li>
                         </ul>
                     </li> */}
-                     <li className="current"><Link to={process.env.PUBLIC_URL + `/`}>Home</Link></li>
-                     <li><Link to={process.env.PUBLIC_URL + `/about`}>About</Link></li>
+                     {/* <li className="current"><Link to={process.env.PUBLIC_URL + `/`}>Home</Link></li> */}
+                     <li><a href='#service-one'>Services</a></li>
+                     <li><a href='#project-one'>Projects</a></li>
+                     <li><a href='#about-one'>About</a></li>
+                     <li><a href='#testimonials-one'>Testimonials</a></li>
                     {/* <li className="dropdown">
                         <Link to={process.env.PUBLIC_URL + `#`}>About</Link>
                         <ul>
@@ -35,7 +38,7 @@ const Nav = () => {
                             <li><Link to={process.env.PUBLIC_URL + `/about-two`}>About Two</Link></li>
                         </ul>
                     </li> */}
-                    <li className="dropdown">
+                    {/* <li className="dropdown">
                         <Link to={process.env.PUBLIC_URL + `#`}>Services</Link>
                         <ul>
                             <li><Link to={process.env.PUBLIC_URL + `/services`}>Services</Link></li>
@@ -45,8 +48,9 @@ const Nav = () => {
                             <li><Link to={process.env.PUBLIC_URL + `/architecture-design`}>Architecture Design</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/multistory-build`}>Multistory Build</Link></li>
                         </ul>
-                    </li>
-                    <li className="dropdown">
+                    </li> */}
+                   
+                    {/* <li className="dropdown">
                         <Link to={process.env.PUBLIC_URL + `#`}>Pages</Link>
                         <ul>
                             <li><Link to={process.env.PUBLIC_URL + `/portfolio`}>Portfolio</Link></li>
@@ -58,8 +62,8 @@ const Nav = () => {
                             <li><Link to={process.env.PUBLIC_URL + `/faq`}>Faq</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/error`}>Error</Link></li>
                         </ul>
-                    </li>
-                    <li className="dropdown">
+                    </li> */}
+                    {/* <li className="dropdown">
                         <Link to={process.env.PUBLIC_URL + `#`}>Blog</Link>
                         <ul>
                             <li><Link to={process.env.PUBLIC_URL + `/blog`}>Blog</Link></li>
@@ -68,8 +72,8 @@ const Nav = () => {
                             <li><Link to={process.env.PUBLIC_URL + `/blog-standard`}>Blog Standard</Link></li>
                             <li><Link to={process.env.PUBLIC_URL + `/blog-details`}>Blog Details</Link></li>
                         </ul>
-                    </li>
-                    <li><Link to={process.env.PUBLIC_URL + `/contact`}>Contact</Link></li>
+                    </li> */}
+                    {/* <li><Link to={process.env.PUBLIC_URL + `/contact`}>Contact</Link></li> */}
                 </ul>
             </nav>
         </div>
