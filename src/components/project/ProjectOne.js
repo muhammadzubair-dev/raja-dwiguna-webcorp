@@ -43,9 +43,9 @@ export default class ProjectOne extends React.Component {
         activeFilterItem.each(function () {
           var filterElement = $(this).data('filter');
           var count = $('.filter-layout').find(filterElement).length;
-          $(this)
-            .children('.filter-text')
-            .append('<span className="count">' + count + '</span>');
+          // $(this)
+          //   .children('.filter-text')
+          //   .append('<span className="count">' + count + '</span>');
         });
       }
     }
