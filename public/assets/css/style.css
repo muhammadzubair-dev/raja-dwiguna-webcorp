@@ -21,14 +21,14 @@
 :root {
     --thm-font: 'Open Sans', sans-serif;
     --thm-font-2: 'Roboto', sans-serif;
-    --thm-base: #ff5e14;
-    --thm-base-rgb: 255, 94, 20;
-    --thm-black: #001659;
-    --thm-black-rgb: 0, 22, 89;
+    --thm-base: #E3232A;
+    --thm-base-rgb: 227, 35, 42;
+    --thm-black: #333333;
+    --thm-black-rgb: 51, 51, 51;
     --thm-gray: #838691;
     --thm-gray-rgb: 131, 134, 145;
-    --thm-primary: #00235a;
-    --thm-primary-rgb: 0, 35, 90;
+    --thm-primary:#333333;
+    --thm-primary-rgb: 51, 51, 51;
 }
 
 .row {
@@ -4288,7 +4288,7 @@ a.sc-hLBbgP {
 .footer-one-sec {
     position: relative;
     display: block;
-    background: #0a1229;
+    background: #8f0000;
     z-index: 1;
 }
 
