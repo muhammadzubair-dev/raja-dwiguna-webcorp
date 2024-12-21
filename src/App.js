@@ -169,15 +169,6 @@ function App() {
         top="1500"
         component={<FaAngleUp />}
       /> */}
-      <a
-        target="_blank"
-        href="https://api.whatsapp.com/send?phone=6287886674010"
-      >
-        <img
-          className="whatsapp"
-          src={`${process.env.PUBLIC_URL}/assets/images/icon/whatsapp.png`}
-        />
-      </a>
     </Router>
   );
 }

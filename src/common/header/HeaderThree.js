@@ -6,7 +6,8 @@ import MobileMenu from './MobileMenu';
 import OffCanvasStyleOne from './OffCanvasStyleOne';
 import SearchButton from './SearchButton';
 
-const HeaderThree = () => {
+const HeaderThree = ({ data }) => {
+  const profile = data.length > 0 ? data[0] : null;
   return (
     <>
       <header className="main-header main-header-one clearfix">
@@ -20,14 +21,14 @@ const HeaderThree = () => {
 
                 <div className="main-header-one__middle">
                   <ul>
-                    <li>
+                    <li style={{ maxWidth: 650 }}>
                       <div className="icon">
                         <span className="icon-pin"></span>
                       </div>
 
                       <div className="text">
                         <span>Our Location</span>
-                        <p>25/7 Barden, London</p>
+                        <p>{profile?.location}</p>
                       </div>
                     </li>
 
@@ -54,7 +55,7 @@ const HeaderThree = () => {
                       <div className="text">
                         <span>Contact</span>
                         <p className="number">
-                          <a href="tel:6287886674010">02-425-562-2457</a>
+                          <a href={`tel:${profile?.phone}`}>{profile?.phone}</a>
                         </p>
                       </div>
                     </li>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { urlFor } from '../../sanityClient';
 
 export default class AboutOne extends React.Component {
   componentDidMount() {
@@ -28,7 +29,9 @@ export default class AboutOne extends React.Component {
     }
   }
   render() {
-    let publicUrl = process.env.PUBLIC_URL + '/';
+    const { data } = this.props;
+    const about = data.length > 0 ? data[0] : null;
+
     return (
       <>
         <section className="about-one-sec" id="about-one">
@@ -40,19 +43,22 @@ export default class AboutOne extends React.Component {
                   <div
                     className="about-one__img-box-bg"
                     style={{
-                      backgroundImage:
-                        'url(' +
-                        publicUrl +
-                        'assets/images/about/about-v1-img1.jpg)',
+                      backgroundImage: `url('${urlFor(about?.photo).url()}')`,
                     }}
                   ></div>
 
                   <div className="about-one__img-box-overlay">
                     <h2>
-                      <span className="odometer" data-count="400">
-                        00
+                      <span
+                        className="odometer"
+                        data-count={about?.projectDone}
+                      >
+                        {about?.projectDone}
                       </span>
-                      <span className="plus">+</span> <br />
+                      {about?.projectDoneWithPlus && (
+                        <span className="plus">+</span>
+                      )}
+                      <br />
                       Project
                       <br />
                       Done
@@ -69,23 +75,15 @@ export default class AboutOne extends React.Component {
                     <div className="sec-title__tagline">
                       <h6>About Company </h6> <span className="right"></span>
                     </div>
-                    <h2 className="sec-title__title">
-                      Our Modern Construction <br />
-                      Agency
-                    </h2>
-                    <p className="sec-title__text">
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly.
-                    </p>
+                    <h2 className="sec-title__title">{about?.title}</h2>
+                    <p className="sec-title__text">{about?.description}</p>
                   </div>
 
                   <div className="about-one__conten-bottom">
-                    <p>
+                    {/* <p>
                       Consectetur, adipisci velit, sed quia nnumquam eius modi
                       tempora inciduntaliquam quaerat{' '}
-                    </p>
+                    </p> */}
 
                     <div className="about-one__progress">
                       {/* Start About One Progress Single */}
@@ -96,9 +94,9 @@ export default class AboutOne extends React.Component {
                         <div className="bar">
                           <div
                             className="bar-inner count-bar"
-                            data-percent="74%"
+                            data-percent={`${about?.qualityProvide}%`}
                           >
-                            <div className="count-text">74%</div>
+                            <div className="count-text">{`${about?.qualityProvide}%`}</div>
                           </div>
                         </div>
                       </div>
@@ -112,9 +110,9 @@ export default class AboutOne extends React.Component {
                         <div className="bar">
                           <div
                             className="bar-inner count-bar"
-                            data-percent="80%"
+                            data-percent={`${about?.projectPlanning}%`}
                           >
-                            <div className="count-text">80%</div>
+                            <div className="count-text">{`${about?.projectPlanning}%`}</div>
                           </div>
                         </div>
                       </div>
