@@ -12163,3 +12163,11 @@ Faq One Faq
     display: block;
     padding-top: 50px;
 }
+
+.slick-dots li button:before {
+    color: white !important; /* Changes the color of the dots */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: white !important; /* Changes the color of the active dot */
+  }

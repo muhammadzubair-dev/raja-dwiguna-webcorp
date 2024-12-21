@@ -1,6 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 
+const settings = {
+  dots: true,
+
+  speed: 500,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  appendDots: (dots) => <ul>{dots}</ul>,
+
+  autoplay: true,
+  speed: 5000,
+
+  cssEase: 'linear',
+  responsive: [
+    {
+      breakpoint: 3000,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // infinite: true,
+        // dots: true,
+      },
+    },
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        // initialSslide: 2,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 export default class ProjectOne extends React.Component {
   componentDidMount() {
     const $ = window.$;
@@ -74,6 +114,7 @@ export default class ProjectOne extends React.Component {
       });
     }
   }
+
   render() {
     let publicUrl = process.env.PUBLIC_URL + '/';
     return (
@@ -131,162 +172,46 @@ export default class ProjectOne extends React.Component {
               </div>
             </div>
 
-            <div className="row filter-layout masonary-layout">
-              {/* Start project One Single */}
-              <div className="col-xl-3 col-lg-3 col-md-6 filter-item factory bulding">
-                <div className="project-one__single">
-                  <div className="project-one__single-img">
-                    <div className="inner">
+            <div className="slider-container">
+              <Slider {...settings}>
+                {[1, 2, 3, 4].map((row) => (
+                  <div>
+                    <div style={{ position: 'relative', padding: '0 8px' }}>
                       <img
-                        src={
-                          publicUrl +
-                          'assets/images/project/project-v1-img1.jpg'
-                        }
+                        width="100%"
+                        height={500}
+                        style={{ objectFit: 'cover' }}
+                        src={`${publicUrl}assets/images/project/project-v1-img${row}.jpg`}
                         alt=""
                       />
-                      <div className="project-one__link">
-                        <a
-                          className="img-popup"
-                          href={
-                            publicUrl +
-                            'assets/images/project/project-v1-img1.jpg'
-                          }
-                        >
-                          <span className="icon-plus-sign"></span>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="content-box">
-                      <h2>
-                        <Link
-                          to={process.env.PUBLIC_URL + `/portfolio-details`}
-                        >
-                          Texture Interture
-                        </Link>
-                      </h2>
-                      <p>Building Interior</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* End project One Single */}
 
-              {/* Start project One Single */}
-              <div className="col-xl-3 col-lg-3 col-md-6 filter-item interios offices factory">
-                <div className="project-one__single">
-                  <div className="project-one__single-img">
-                    <div className="inner">
-                      <img
-                        src={
-                          publicUrl +
-                          'assets/images/project/project-v1-img2.jpg'
-                        }
-                        alt=""
-                      />
-                      <div className="project-one__link">
-                        <a
-                          className="img-popup"
-                          href={
-                            publicUrl +
-                            'assets/images/project/project-v1-img2.jpg'
-                          }
-                        >
-                          <span className="icon-plus-sign"></span>
-                        </a>
+                      {/* Overlay */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          // top: '50%',
+                          // left: '50%',
+                          // transform: 'translate(-50%, -50%)',
+                          color: 'white',
+                          textAlign: 'center',
+                          padding: '10px 16px',
+                          backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent background
+                          // borderRadius: '8px',
+                          bottom: 0,
+                          textAlign: 'left',
+                        }}
+                      >
+                        <p style={{ fontSize: 20, fontWeight: 'bold' }}>
+                          Nama Project {row}
+                        </p>
+                        <p style={{ fontWeight: 400, fontSize: 14 }}>
+                          Description Project Here {row}
+                        </p>
                       </div>
                     </div>
-                    <div className="content-box">
-                      <h2>
-                        <Link
-                          to={process.env.PUBLIC_URL + `/portfolio-details`}
-                        >
-                          Texture Interture
-                        </Link>
-                      </h2>
-                      <p>Building Interior</p>
-                    </div>
                   </div>
-                </div>
-              </div>
-              {/* End project One Single */}
-
-              {/* Start project One Single */}
-              <div className="col-xl-3 col-lg-3 col-md-6 filter-item interios factory bulding">
-                <div className="project-one__single">
-                  <div className="project-one__single-img">
-                    <div className="inner">
-                      <img
-                        src={
-                          publicUrl +
-                          'assets/images/project/project-v1-img3.jpg'
-                        }
-                        alt=""
-                      />
-                      <div className="project-one__link">
-                        <a
-                          className="img-popup"
-                          href={
-                            publicUrl +
-                            'assets/images/project/project-v1-img3.jpg'
-                          }
-                        >
-                          <span className="icon-plus-sign"></span>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="content-box">
-                      <h2>
-                        <Link
-                          to={process.env.PUBLIC_URL + `/portfolio-details`}
-                        >
-                          Texture Interture
-                        </Link>
-                      </h2>
-                      <p>Building Interior</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* End project One Single */}
-
-              {/* Start project One Single */}
-              <div className="col-xl-3 col-lg-3 col-md-6 filter-item bulding offices">
-                <div className="project-one__single">
-                  <div className="project-one__single-img">
-                    <div className="inner">
-                      <img
-                        src={
-                          publicUrl +
-                          'assets/images/project/project-v1-img4.jpg'
-                        }
-                        alt=""
-                      />
-                      <div className="project-one__link">
-                        <a
-                          className="img-popup"
-                          href={
-                            publicUrl +
-                            'assets/images/project/project-v1-img4.jpg'
-                          }
-                        >
-                          <span className="icon-plus-sign"></span>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="content-box">
-                      <h2>
-                        <Link
-                          to={process.env.PUBLIC_URL + `/portfolio-details`}
-                        >
-                          Texture Interture
-                        </Link>
-                      </h2>
-                      <p>Building Interior</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* End project One Single */}
+                ))}
+              </Slider>
             </div>
           </div>
         </section>
