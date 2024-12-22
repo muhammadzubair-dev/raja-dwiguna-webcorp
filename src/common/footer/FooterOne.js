@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default class FooterOne extends React.Component {
   render() {
+    const { data } = this.props;
+    const profile = data.length > 0 ? data[0] : null;
     let publicUrl = process.env.PUBLIC_URL + '/';
     return (
       <>
@@ -47,14 +49,22 @@ export default class FooterOne extends React.Component {
                                 alt="Logo"
                               />
                             </Link>
-                            <p className="footer-widget__about-text">
-                              Duis aute irure dolor in reprehenderit on
-                              voluptate velit esse cillum dolore eu nulla
-                              pariatur. Excepteur sint occaecat
+                            <p
+                              className="footer-widget__about-text"
+                              style={{ whiteSpace: 'pre-wrap', marginTop: 10 }}
+                            >
+                              {profile?.footerText}
+                            </p>
+
+                            <p
+                              className="footer-widget__about-text"
+                              style={{ whiteSpace: 'pre-wrap', marginTop: 10 }}
+                            >
+                              {profile?.fullLocation}
                             </p>
                           </div>
 
-                          <div className="footer-widget__about-social-link">
+                          {/* <div className="footer-widget__about-social-link">
                             <ul>
                               <li>
                                 <a href="https://facebook.com">
@@ -84,7 +94,7 @@ export default class FooterOne extends React.Component {
                                 </a>
                               </li>
                             </ul>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
 
@@ -234,15 +244,18 @@ export default class FooterOne extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-xl-12">
-                  <div className="footer-one__bottom-inner">
+                  <div
+                    className="footer-one__bottom-inner"
+                    style={{ justifyContent: 'center' }}
+                  >
                     <div className="footer-one__bottom-text">
-                      <p>
-                        Copyright &copy;2022. All rights reserved to{' '}
-                        <Link to="/">Const</Link>
+                      <p style={{ textAlign: 'center' }}>
+                        Copyright &copy;2024. All rights reserved to{' '}
+                        <b>PT Raja Dwiguna Semesta</b>
                       </p>
                     </div>
 
-                    <div className="footer-one__bottom-list">
+                    {/* <div className="footer-one__bottom-list">
                       <ul>
                         <li>
                           <Link to="/about-one">Terms & Condition </Link>
@@ -254,7 +267,7 @@ export default class FooterOne extends React.Component {
                           <Link to="/about-one">Careers</Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

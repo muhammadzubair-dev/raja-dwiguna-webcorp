@@ -10,6 +10,10 @@ export const profileType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'fullLocation',
+      type: 'text',
+    }),
+    defineField({
       name: 'phone',
       type: 'string',
     }),
@@ -18,12 +22,12 @@ export const profileType = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'facebook',
+      name: 'email',
       type: 'string',
     }),
     defineField({
-      name: 'instagram',
-      type: 'string',
+      name: 'footerText',
+      type: 'text',
     }),
   ],
 })

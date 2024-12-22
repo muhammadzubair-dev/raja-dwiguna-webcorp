@@ -75,7 +75,7 @@ const HeaderThree = ({ data }) => {
                 <div className="main-header-one__bottom-left">
                   <nav className="main-menu main-menu--1">
                     <div className="main-menu__inner">
-                      <MobileMenu />
+                      <MobileMenu data={profile} />
                       <div className="stricky-one-logo">
                         <LogoWhite />
                       </div>

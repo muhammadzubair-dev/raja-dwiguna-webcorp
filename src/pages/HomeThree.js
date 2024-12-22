@@ -28,6 +28,9 @@ const HomeThree = () => {
   const [service, setService] = React.useState([]);
   const [about, setAbout] = React.useState([]);
   const [project, setProject] = React.useState([]);
+  const [brand, setBrand] = React.useState([]);
+  const [testimonial, setTestimonial] = React.useState([]);
+
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
 
@@ -40,6 +43,8 @@ const HomeThree = () => {
           client.fetch('*[_type == "service"]').then(setService),
           client.fetch('*[_type == "about"]').then(setAbout),
           client.fetch('*[_type == "project"]').then(setProject),
+          client.fetch('*[_type == "client"]').then(setBrand),
+          client.fetch('*[_type == "testimonial"]').then(setTestimonial),
         ]);
       } catch (err) {
         console.error('Error fetching data:', err);
@@ -88,10 +93,10 @@ const HomeThree = () => {
       {/* <WhyChooseOne /> */}
       {/* <WorkPerformanceOne /> */}
       {/* <FeatureFive /> */}
-      <BrandOne />
-      <TestimonialOne />
+      <BrandOne data={brand.sort((a, b) => a.number - b.number)} />
+      <TestimonialOne data={testimonial.sort((a, b) => a.number - b.number)} />
       {/* <BlogThree /> */}
-      <FooterOne />
+      <FooterOne data={profile} />
       <a
         target="_blank"
         href={`https://api.whatsapp.com/send?phone=${profile[0].phone}`}

@@ -293,7 +293,7 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
-const MobileMenu = () => {
+const MobileMenu = ({ data }) => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -331,19 +331,28 @@ const MobileMenu = () => {
               {menuData.map((item, index) => (
                 <SubMenu item={item} key={index} />
               ))}
-              <ul className="mobile-nav__contact list-unstyled">
+              <ul
+                className="mobile-nav__contact list-unstyled"
+                style={{ marginLeft: 0 }}
+              >
                 <li>
-                  <i className="fa fa-envelope" aria-hidden="true"></i>
-                  <a href="mailto:needhelp@packageName__.com">
-                    needhelp@const.com
-                  </a>
+                  <i
+                    className="fa fa-envelope"
+                    aria-hidden="true"
+                    style={{ width: '40px !important' }}
+                  ></i>
+                  <a href={`mailto:${data?.email}`}>{data?.email}</a>
                 </li>
                 <li>
-                  <i className="fa fa-phone" aria-hidden="true"></i>
-                  <a href="tel:666-888-0000">666 888 0000</a>
+                  <i
+                    className="fa fa-phone"
+                    aria-hidden="true"
+                    style={{ width: '40px !important' }}
+                  ></i>
+                  <a href={`tel:${data?.phone}`}>{data?.phone}</a>
                 </li>
               </ul>
-              <div className="mobile-nav__top">
+              {/* <div className="mobile-nav__top">
                 <div className="mobile-nav__social">
                   <a href="https://twitter.com/">
                     <span className="fab fa-twitter"></span>
@@ -358,7 +367,7 @@ const MobileMenu = () => {
                     <span className="fab fa-instagram"></span>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </SidebarWrap>
         </SidebarNav>
