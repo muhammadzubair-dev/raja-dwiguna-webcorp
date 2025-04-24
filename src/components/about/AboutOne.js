@@ -79,15 +79,15 @@ export default class AboutOne extends React.Component {
                     <p className="sec-title__text">{about?.description}</p>
                   </div>
 
-                  <div className="about-one__conten-bottom">
-                    {/* <p>
+                  {/* <div className="about-one__conten-bottom"> */}
+                  {/* <p>
                       Consectetur, adipisci velit, sed quia nnumquam eius modi
                       tempora inciduntaliquam quaerat{' '}
                     </p> */}
 
-                    <div className="about-one__progress">
-                      {/* Start About One Progress Single */}
-                      <div className="about-one__progress-single">
+                  {/* <div className="about-one__progress"> */}
+                  {/* Start About One Progress Single */}
+                  {/* <div className="about-one__progress-single">
                         <h4 className="about-one__progress-single-title">
                           Quality Provide
                         </h4>
@@ -99,11 +99,11 @@ export default class AboutOne extends React.Component {
                             <div className="count-text">{`${about?.qualityProvide}%`}</div>
                           </div>
                         </div>
-                      </div>
-                      {/* End About One Progress Single */}
+                      </div> */}
+                  {/* End About One Progress Single */}
 
-                      {/* Start About One Progress Single */}
-                      <div className="about-one__progress-single mar0">
+                  {/* Start About One Progress Single */}
+                  {/* <div className="about-one__progress-single mar0">
                         <h4 className="about-one__progress-single-title">
                           Project Planing
                         </h4>
@@ -115,10 +115,10 @@ export default class AboutOne extends React.Component {
                             <div className="count-text">{`${about?.projectPlanning}%`}</div>
                           </div>
                         </div>
-                      </div>
-                      {/* End About One Progress Single */}
-                    </div>
-                  </div>
+                      </div> */}
+                  {/* End About One Progress Single */}
+                  {/* </div> */}
+                  {/* </div> */}
                 </div>
               </div>
               {/* End About One Content */}
