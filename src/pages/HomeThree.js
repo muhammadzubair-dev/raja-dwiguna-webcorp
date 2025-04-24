@@ -99,7 +99,7 @@ const HomeThree = () => {
       <FooterOne data={profile} />
       <a
         target="_blank"
-        href={`https://api.whatsapp.com/send?phone=${profile[0].phone}`}
+        href={`https://api.whatsapp.com/send?phone=${profile[0].whatsapp}`}
       >
         <img
           className="whatsapp"
