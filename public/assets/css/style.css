@@ -4249,6 +4249,10 @@ a.sc-hLBbgP {
     z-index: -1;
 }
 
+.brand-one-sec .swiper-wrapper {
+    align-items: center;
+}
+
 .brand-one-sec .swiper-slide {
     position: relative;
     display: -webkit-box;
