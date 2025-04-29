@@ -57,7 +57,7 @@ export default class BrandOne extends React.Component {
               }}
               className="thm-swiper__slider swiper-container"
             >
-              <div className="swiper-wrapper">
+              <div className="swiper-wrapper" style={{ alignItems: 'center' }}>
                 {data.map((item, i) => (
                   <SwiperSlide className="swiper-slide">
                     <Link to={process.env.PUBLIC_URL + `/`}>

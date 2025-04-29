@@ -4272,6 +4272,7 @@ a.sc-hLBbgP {
 .brand-one-sec .swiper-slide>a>img {
     opacity: 1;
     transition: all 0.2s ease-in-out 0.1s;
+    width: 100%;
 }
 
 .brand-one-sec .swiper-slide:hover>a>img {
