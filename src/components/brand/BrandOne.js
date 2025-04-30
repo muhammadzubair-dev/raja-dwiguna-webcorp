@@ -20,7 +20,7 @@ export default class BrandOne extends React.Component {
             }}
           ></div>
           <div className="container">
-            <Swiper
+            {/* <Swiper
               loop={true}
               spaceBetween={50}
               slidesPerView={5}
@@ -66,7 +66,35 @@ export default class BrandOne extends React.Component {
                   </SwiperSlide>
                 ))}
               </div>
-            </Swiper>
+            </Swiper> */}
+            {/* <div className="sec-title text-center">
+              <div className="sec-title__tagline">
+                <span
+                  style={{ background: '#fff' }}
+                  color="#fff"
+                  className="left"
+                ></span>
+                <h6 style={{ color: '#fff' }}>Partner & Clients</h6>{' '}
+                <span style={{ background: '#fff' }} className="right"></span>
+              </div>
+            </div> */}
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: 30,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              {data.map((item, i) => (
+                <img
+                  src={urlFor(item.photo).url()}
+                  alt={item.client}
+                  height={55}
+                />
+              ))}
+            </div>
           </div>
         </section>
       </>
