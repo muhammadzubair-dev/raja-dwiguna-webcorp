@@ -2014,6 +2014,7 @@ a.sc-hLBbgP {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    /* background-position: 70% 50%; */
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -4231,7 +4232,8 @@ a.sc-hLBbgP {
 .brand-one-sec {
     position: relative;
     display: block;
-    background: var(--thm-base);
+    /* background: var(--thm-base); */
+    background: #fff;
     padding: 100px 0px 100px;
     z-index: 1;
 }
