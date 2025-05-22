@@ -1711,9 +1711,12 @@ a.sc-hLBbgP {
 }
 
 .main-header-one__bottom {
-    position: relative;
+    /* position: relative; */
     display: block;
     background: #f7f7f7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .main-header-one__bottom .container-fluid {
@@ -2705,7 +2708,7 @@ a.sc-hLBbgP {
 .services-one-sec {
     position: relative;
     display: block;
-    padding: 90px 0px 0px 0px;
+    padding: 150px 0px 0px 0px;
     z-index: 1;
 }
 
@@ -2844,7 +2847,7 @@ a.sc-hLBbgP {
     position: relative;
     display: block;
     background: #ffffff;
-    padding: 90px 0px;
+    padding: 150px 0px 90px;
     z-index: 1;
 }
 
@@ -3007,7 +3010,7 @@ a.sc-hLBbgP {
     position: relative;
     display: block;
     background: var(--thm-primary);
-    padding: 120px 0px 117px;
+    padding: 150px 0px 117px;
     z-index: 1;
 }
 

@@ -93,6 +93,13 @@ export default class FooterOne extends React.Component {
                                   <span className="second icon-linkedin"></span>
                                 </a>
                               </li>
+
+                              <li>
+                                <a href="https://instagram.com">
+                                  <span className="first icon-instagram"></span>
+                                  <span className="second icon-instagram"></span>
+                                </a>
+                              </li>
                             </ul>
                           </div> */}
                         </div>

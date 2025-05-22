@@ -14,6 +14,7 @@ import BlogThree from '../components/blog/BlogThree';
 import BrandOne from '../components/brand/BrandOne';
 import FooterOne from '../common/footer/FooterOne';
 import client from '../sanityClient';
+import HeaderThreeSticky from '../common/header/HeaderThreeSticky';
 
 let publicUrl = process.env.PUBLIC_URL + '/';
 
@@ -85,6 +86,7 @@ const HomeThree = () => {
   return (
     <>
       <HeaderThree data={profile} />
+      <HeaderThreeSticky data={profile} />
       <HeroThree data={hero.sort((a, b) => a.number - b.number)} />
       {/* <FeatureOne /> */}
       <ServiceOne data={service.sort((a, b) => a.number - b.number)} />

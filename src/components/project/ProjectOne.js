@@ -14,17 +14,23 @@ const ProjectOne = ({ data }) => {
   const settings = {
     dots: true,
     infinite: count > 3,
-    // infinite: true,
-    // rows: 1,
-    // slidesToRow: count < 3 ? count : 3,
     slidesToShow: count < 3 ? count : 3,
     slidesToScroll: 1,
-    // pauseOnDotsHover: true,
-    // pauseOnFocus: true,
-    // pauseOnHover: true,
+    pauseOnFocus: true,
+    pauseOnHover: true,
     autoplay: true,
-    speed: 5000,
-    cssEase: 'linear',
+
+    // Properti untuk swipe
+    swipe: true, // Mengaktifkan swipe
+    swipeToSlide: true, // Memungkinkan swipe ke slide manapun
+    touchThreshold: 5, // Sensitivitas swipe (semakin rendah semakin sensitif)
+    touchMove: true, // Mengaktifkan gerakan sentuh
+    draggable: true, // Memungkinkan drag dengan mouse
+
+    // Perbaikan pengaturan kecepatan
+    autoplaySpeed: 3000, // Waktu antara perpindahan slide (dalam ms)
+    speed: 500, // Kecepatan animasi slide (dalam ms)
+    cssEase: 'ease-out', // Jenis animasi yang lebih alami
     responsive: [
       {
         breakpoint: 3000,

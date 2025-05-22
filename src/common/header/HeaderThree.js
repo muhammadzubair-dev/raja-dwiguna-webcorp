@@ -69,7 +69,7 @@ const HeaderThree = ({ data }) => {
             </div>
           </div>
 
-          <div className="main-header-one__bottom">
+          {/* <div className="main-header-one__bottom">
             <div className="container-fluid">
               <div className="main-header-one__bottom-inner">
                 <div className="main-header-one__bottom-left">
@@ -85,7 +85,7 @@ const HeaderThree = ({ data }) => {
                 </div>
 
                 <div className="main-header-one__bottom-right">
-                  {/* <div className="search-box">
+                  <div className="search-box">
                     <SearchButton />
                   </div>
 
@@ -94,7 +94,7 @@ const HeaderThree = ({ data }) => {
                       <span className="icon-shopping-bag-1"></span>
                       <span className="count">0</span>
                     </Link>
-                  </div> */}
+                  </div>
 
                   <div className="main-header-one__bottom-right-btn">
                     <a
@@ -108,7 +108,7 @@ const HeaderThree = ({ data }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </header>
     </>
