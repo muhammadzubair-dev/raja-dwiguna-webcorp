@@ -1,9 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  FaInstagram,
+  FaFacebook,
+  FaYoutube,
+  FaLinkedin,
+  FaXTwitter,
+  FaThreads,
+  FaTiktok,
+} from 'react-icons/fa6';
+
+const iconMap = {
+  Facebook: FaFacebook,
+  Instagram: FaInstagram,
+  Youtube: FaYoutube,
+  LinkedIn: FaLinkedin,
+  XTwitter: FaXTwitter,
+  Threads: FaThreads,
+  Tiktok: FaTiktok,
+};
 
 export default class FooterOne extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, followUs } = this.props;
     const profile = data.length > 0 ? data[0] : null;
     let publicUrl = process.env.PUBLIC_URL + '/';
     return (
@@ -62,6 +81,41 @@ export default class FooterOne extends React.Component {
                             >
                               {profile?.fullLocation}
                             </p>
+                          </div>
+
+                          <div>
+                            <p style={{ fontWeight: 600, color: 'white' }}>
+                              Follow Us
+                            </p>
+                            <div
+                              style={{
+                                marginTop: 10,
+                                display: 'flex',
+                                gap: 16,
+                              }}
+                            >
+                              {followUs
+                                .filter((item) => item.enabled) // hanya tampilkan yang enabled
+                                .map((item) => {
+                                  const IconComponent = iconMap[item.title];
+                                  return (
+                                    IconComponent && (
+                                      <div
+                                        key={item._id}
+                                        onClick={() =>
+                                          window.open(item.link, '_blank')
+                                        }
+                                        style={{ cursor: 'pointer' }}
+                                      >
+                                        <IconComponent
+                                          color="white"
+                                          size={24}
+                                        />
+                                      </div>
+                                    )
+                                  );
+                                })}
+                            </div>
                           </div>
 
                           {/* <div className="footer-widget__about-social-link">

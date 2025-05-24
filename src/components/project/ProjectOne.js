@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import { urlFor } from '../../sanityClient';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const ProjectOne = ({ data }) => {
+const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
   const [type, setType] = React.useState('all');
   const [projects, setProjects] = React.useState(data);
   const publicUrl = process.env.PUBLIC_URL + '/';
@@ -133,7 +132,16 @@ const ProjectOne = ({ data }) => {
           <Slider {...settings}>
             {projects.map((item) => (
               <div key={item._id}>
-                <div style={{ position: 'relative', padding: '0 8px' }}>
+                <div
+                  style={{ position: 'relative', padding: '0 8px' }}
+                  onClick={() =>
+                    onOpenModal(
+                      item?.title,
+                      urlFor(item?.photo).url(),
+                      item?.description
+                    )
+                  }
+                >
                   <img
                     width="100%"
                     height={500}

@@ -12,7 +12,7 @@ export const clientType = defineType({
     }),
     defineField({
       name: 'client',
-      type: 'text',
+      type: 'string',
     }),
     defineField({
       name: 'photo',

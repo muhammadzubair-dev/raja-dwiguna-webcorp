@@ -5,5 +5,6 @@ import {aboutType} from './aboutType'
 import {projectType} from './projectType'
 import {clientType} from './clientType'
 import {testimonialType} from './testimonialType'
+import {followUsType} from './FollowUsType'
 
-export const schemaTypes = [profileType, heroType, serviceType, aboutType, projectType, clientType, testimonialType]
+export const schemaTypes = [profileType, heroType, serviceType, aboutType, projectType, clientType, testimonialType, followUsType]

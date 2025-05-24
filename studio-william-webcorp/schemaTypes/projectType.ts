@@ -13,7 +13,7 @@ export const projectType = defineType({
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'text',
+      type: 'string',
     }),
     defineField({
       name: 'description',
