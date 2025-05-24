@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import { urlFor } from '../../sanityClient';
 import 'slick-carousel/slick/slick.css';
@@ -10,6 +10,23 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
   const publicUrl = process.env.PUBLIC_URL + '/';
   const count = projects.length;
 
+  // Refs for swipe detection
+  const isDraggingRef = useRef(false);
+
+  const handleMouseDown = () => {
+    isDraggingRef.current = false;
+  };
+
+  const handleMouseMove = () => {
+    isDraggingRef.current = true;
+  };
+
+  const handleMouseUp = (item) => {
+    if (!isDraggingRef.current) {
+      onOpenModal(item?.title, urlFor(item?.photo).url(), item?.description);
+    }
+  };
+
   const settings = {
     dots: true,
     infinite: count > 3,
@@ -18,18 +35,14 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
     pauseOnFocus: true,
     pauseOnHover: true,
     autoplay: true,
-
-    // Properti untuk swipe
-    swipe: true, // Mengaktifkan swipe
-    swipeToSlide: true, // Memungkinkan swipe ke slide manapun
-    touchThreshold: 5, // Sensitivitas swipe (semakin rendah semakin sensitif)
-    touchMove: true, // Mengaktifkan gerakan sentuh
-    draggable: true, // Memungkinkan drag dengan mouse
-
-    // Perbaikan pengaturan kecepatan
-    autoplaySpeed: 3000, // Waktu antara perpindahan slide (dalam ms)
-    speed: 500, // Kecepatan animasi slide (dalam ms)
-    cssEase: 'ease-out', // Jenis animasi yang lebih alami
+    swipe: true,
+    swipeToSlide: true,
+    touchThreshold: 5,
+    touchMove: true,
+    draggable: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+    cssEase: 'ease-out',
     responsive: [
       {
         breakpoint: 3000,
@@ -131,17 +144,17 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
         <div>
           <Slider {...settings}>
             {projects.map((item) => (
-              <div key={item._id}>
-                <div
-                  style={{ position: 'relative', padding: '0 8px' }}
-                  onClick={() =>
-                    onOpenModal(
-                      item?.title,
-                      urlFor(item?.photo).url(),
-                      item?.description
-                    )
-                  }
-                >
+              <div
+                key={item._id}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={() => handleMouseUp(item)}
+                onTouchStart={handleMouseDown}
+                onTouchMove={handleMouseMove}
+                onTouchEnd={() => handleMouseUp(item)}
+                style={{ cursor: 'pointer', userSelect: 'none' }}
+              >
+                <div style={{ position: 'relative', padding: '0 8px' }}>
                   <img
                     width="100%"
                     height={500}
@@ -149,14 +162,13 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
                     src={urlFor(item.photo).url()}
                     alt=""
                   />
-                  {/* Overlay */}
                   <div
                     style={{
                       position: 'absolute',
                       color: 'white',
                       textAlign: 'center',
                       padding: '10px 16px',
-                      backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent background
+                      backgroundColor: 'rgba(0, 0, 0, 0.7)',
                       bottom: 0,
                       textAlign: 'left',
                     }}
