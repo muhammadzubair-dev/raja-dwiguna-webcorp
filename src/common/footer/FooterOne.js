@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withTranslation } from 'react-i18next';
 import {
   FaInstagram,
   FaFacebook,
@@ -20,9 +21,9 @@ const iconMap = {
   Tiktok: FaTiktok,
 };
 
-export default class FooterOne extends React.Component {
+class FooterOne extends React.Component {
   render() {
-    const { data, followUs } = this.props;
+    const { data, followUs, t } = this.props;
     const profile = data.length > 0 ? data[0] : null;
     let publicUrl = process.env.PUBLIC_URL + '/';
     return (
@@ -85,7 +86,7 @@ export default class FooterOne extends React.Component {
 
                           <div>
                             <p style={{ fontWeight: 600, color: 'white' }}>
-                              Follow Us
+                              {t('followUs')}
                             </p>
                             <div
                               style={{
@@ -311,7 +312,7 @@ export default class FooterOne extends React.Component {
                   >
                     <div className="footer-one__bottom-text">
                       <p style={{ textAlign: 'center' }}>
-                        Copyright &copy;2024. All rights reserved to{' '}
+                        {t('copyright')}{' '}
                         <b>PT Raja Dwiguna Semesta</b>
                       </p>
                     </div>
@@ -339,3 +340,5 @@ export default class FooterOne extends React.Component {
     );
   }
 }
+
+export default withTranslation()(FooterOne);

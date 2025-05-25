@@ -1,0 +1,27 @@
+{
+  "welcome": "Welcome",
+  "description": "This is a dual language app.",
+  "header": {
+    "ourLocation": "Our Location",
+    "contact": "Contact",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "testimonials": "Testimonials",
+    "getStarted": "Get Started"
+  },
+  "project": "Project",
+  "done": "Done",
+  "ourServices": "Our Services",
+  "ourProfessionalServices": "Our Professional Services",
+  "aboutCompany": "About Company",
+  "ourProject": "Our Project",
+  "ourWorkingProject": "Our Working Project",
+  "allProject": "All Project",
+  "inProgress": "In Progress",
+  "finished": "Finished",
+  "ourTestimonials": "Our Testimonials",
+  "ourSweetClient": "Our Sweet Client Say",
+  "followUs": "Follow Us",
+  "copyright": "Copyright ©2024. All rights reserved to"
+}

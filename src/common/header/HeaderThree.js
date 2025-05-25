@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import LogoWhite from './LogoWhite';
 import Nav from './Nav';
 import MobileMenu from './MobileMenu';
@@ -8,6 +9,8 @@ import SearchButton from './SearchButton';
 
 const HeaderThree = ({ data }) => {
   const profile = data.length > 0 ? data[0] : null;
+   const { t } = useTranslation();
+
   return (
     <>
       <header className="main-header main-header-one clearfix">
@@ -27,7 +30,7 @@ const HeaderThree = ({ data }) => {
                       </div>
 
                       <div className="text">
-                        <span>Our Location</span>
+                        <span>{t('header.ourLocation')}</span>
                         <p>{profile?.location}</p>
                       </div>
                     </li>
@@ -53,7 +56,7 @@ const HeaderThree = ({ data }) => {
                       </div>
 
                       <div className="text">
-                        <span>Contact</span>
+                        <span>{t('header.contact')}</span>
                         <p className="number">
                           <a href={`tel:${profile?.phone}`}>{profile?.phone}</a>
                         </p>

@@ -1,7 +1,8 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import { urlFor } from '../../sanityClient';
 
-export default class TestimonialOne extends React.Component {
+class TestimonialOne extends React.Component {
   componentDidMount() {
     const $ = window.$;
 
@@ -40,7 +41,7 @@ export default class TestimonialOne extends React.Component {
     }
   }
   render() {
-    const { data } = this.props;
+    const { data, t } = this.props;
     let publicUrl = process.env.PUBLIC_URL + '/';
     return (
       <>
@@ -65,9 +66,9 @@ export default class TestimonialOne extends React.Component {
             <div className="sec-title text-center">
               <div className="sec-title__tagline">
                 <span className="left"></span>
-                <h6>Our Testimonials</h6> <span className="right"></span>
+                <h6>{t('ourTestimonials')}</h6> <span className="right"></span>
               </div>
-              <h2 className="sec-title__title">Our Sweet Client Say</h2>
+              <h2 className="sec-title__title">{t('ourSweetClient')}</h2>
             </div>
             <div className="row">
               <div className="col-xl-12">
@@ -122,3 +123,5 @@ export default class TestimonialOne extends React.Component {
     );
   }
 }
+
+export default withTranslation()(TestimonialOne);

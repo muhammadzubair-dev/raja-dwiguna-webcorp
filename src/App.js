@@ -39,6 +39,8 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
+import './i18n';
+
 function App() {
   useEffect(() => {
     new WOW.WOW({

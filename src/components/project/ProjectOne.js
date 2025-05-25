@@ -3,10 +3,12 @@ import Slider from 'react-slick';
 import { urlFor } from '../../sanityClient';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useTranslation } from 'react-i18next';
 
 const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
   const [type, setType] = React.useState('all');
   const [projects, setProjects] = React.useState(data);
+  const { t } = useTranslation();
   const publicUrl = process.env.PUBLIC_URL + '/';
   const count = projects.length;
 
@@ -87,9 +89,9 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
         <div className="sec-title text-center">
           <div className="sec-title__tagline">
             <span className="left"></span>
-            <h6>Our project</h6> <span className="right"></span>
+            <h6>{t('ourProject')}</h6> <span className="right"></span>
           </div>
-          <h2 className="sec-title__title">Our Working Project</h2>
+          <h2 className="sec-title__title">{t('ourWorkingProject')}</h2>
         </div>
 
         <div className="row">
@@ -104,7 +106,7 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
                     setProjects(data);
                   }}
                 >
-                  <span className="filter-text">All Project</span>
+                  <span className="filter-text">{t('allProject')}</span>
                 </li>
                 <li
                   data-filter=".factory"
@@ -118,7 +120,7 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
                 >
                   <span className="filter-text">
                     {' '}
-                    <i className="icon-wrench"></i>In Progress
+                    <i className="icon-wrench"></i>{t('inProgress')}
                   </span>
                 </li>
                 <li
@@ -133,7 +135,7 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
                 >
                   <span className="filter-text">
                     {' '}
-                    <i className="icon-surgery"></i>Finished{' '}
+                    <i className="icon-surgery"></i>{t('finished')}{' '}
                   </span>
                 </li>
               </ul>

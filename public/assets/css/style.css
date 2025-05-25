@@ -3012,6 +3012,7 @@ a.sc-hLBbgP {
     background: var(--thm-primary);
     padding: 150px 0px 117px;
     z-index: 1;
+    overflow: hidden;
 }
 
 .project-one-sec .row {

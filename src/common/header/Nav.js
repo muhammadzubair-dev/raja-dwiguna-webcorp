@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {Link} from "react-router-dom";
 
 const Nav = () => {
+    const { t } = useTranslation();
     return (
         <div className="main-menu text-center">
             <nav>
@@ -27,10 +29,10 @@ const Nav = () => {
                         </ul>
                     </li> */}
                      {/* <li className="current"><Link to={process.env.PUBLIC_URL + `/`}>Home</Link></li> */}
-                     <li><a href='#service-one'>Services</a></li>
-                     <li><a href='#project-one'>Projects</a></li>
-                     <li><a href='#about-one'>About</a></li>
-                     <li><a href='#testimonials-one'>Testimonials</a></li>
+                     <li><a href='#service-one'>{t('header.services')}</a></li>
+                     <li><a href='#project-one'>{t('header.projects')}</a></li>
+                     <li><a href='#about-one'>{t('header.about')}</a></li>
+                     <li><a href='#testimonials-one'>{t('header.testimonials')}</a></li>
                     {/* <li className="dropdown">
                         <Link to={process.env.PUBLIC_URL + `#`}>About</Link>
                         <ul>

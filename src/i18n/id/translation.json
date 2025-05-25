@@ -1,0 +1,27 @@
+{
+  "welcome": "Selamat Datang",
+  "description": "Ini adalah aplikasi dua bahasa.",
+  "header": {
+    "ourLocation": "Lokasi Kami",
+    "contact": "Kontak",
+    "services": "Layanan",
+    "projects": "Proyek",
+    "about": "Tentang Kami",
+    "testimonials": "Testimoni",
+    "getStarted": "Mulai"
+  },
+  "project": "Projek",
+  "done": "Selesai",
+  "ourServices": "Layanan Kami",
+  "ourProfessionalServices": "Layanan Profesional Kami",
+  "aboutCompany": "Tentang Perusahaan",
+  "ourProject": "Proyek Kami",
+  "ourWorkingProject": "Proyek Kerja Kami",
+  "allProject": "Semua Proyek",
+  "inProgress": "Sedang Berjalan",
+  "finished": "Selesai",
+  "ourTestimonials": "Testimoni Kami",
+  "ourSweetClient": "Kata Klien Kami",
+  "followUs": "Ikuti Kami",
+  "copyright": "Hak Cipta ©2024. Semua hak dilindungi oleh"
+}

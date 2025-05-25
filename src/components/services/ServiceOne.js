@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { urlFor } from '../../sanityClient';
+import { withTranslation } from 'react-i18next';
 
-export default class ServiceOne extends React.Component {
+ class ServiceOne extends React.Component {
   render() {
     let publicUrl = process.env.PUBLIC_URL + '/';
-    const { data } = this.props;
+    const { data, t } = this.props;
+    
     return (
       <>
         <section className="services-one-sec" id="service-one">
@@ -13,9 +15,9 @@ export default class ServiceOne extends React.Component {
             <div className="sec-title text-center">
               <div className="sec-title__tagline">
                 <span className="left"></span>
-                <h6>Our Services</h6> <span className="right"></span>
+                <h6>{t('ourServices')}</h6> <span className="right"></span>
               </div>
-              <h2 className="sec-title__title">Our Professional Services</h2>
+              <h2 className="sec-title__title">{t('ourProfessionalServices')}</h2>
             </div>
 
             <div className="row">
@@ -63,3 +65,5 @@ export default class ServiceOne extends React.Component {
     );
   }
 }
+
+export default withTranslation()(ServiceOne);

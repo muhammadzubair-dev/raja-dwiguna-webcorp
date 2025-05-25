@@ -1,7 +1,8 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import { urlFor } from '../../sanityClient';
 
-export default class AboutOne extends React.Component {
+class AboutOne extends React.Component {
   componentDidMount() {
     const $ = window.$;
 
@@ -29,7 +30,7 @@ export default class AboutOne extends React.Component {
     }
   }
   render() {
-    const { data } = this.props;
+    const { data, t } = this.props;
     const about = data.length > 0 ? data[0] : null;
 
     return (
@@ -59,9 +60,9 @@ export default class AboutOne extends React.Component {
                         <span className="plus">+</span>
                       )}
                       <br />
-                      Project
+                      {t('project')}
                       <br />
-                      Done
+                      {t('done')}
                     </h2>
                   </div>
                 </div>
@@ -73,7 +74,7 @@ export default class AboutOne extends React.Component {
                 <div className="about-one__content">
                   <div className="sec-title">
                     <div className="sec-title__tagline">
-                      <h6>About Company </h6> <span className="right"></span>
+                      <h6>{t('aboutCompany')} </h6> <span className="right"></span>
                     </div>
                     <h2 className="sec-title__title">{about?.title}</h2>
                     <p className="sec-title__text">{about?.description}</p>
@@ -129,3 +130,5 @@ export default class AboutOne extends React.Component {
     );
   }
 }
+
+export default withTranslation()(AboutOne);

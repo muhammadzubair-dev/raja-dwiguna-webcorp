@@ -5,9 +5,13 @@ import Nav from './Nav';
 import MobileMenu from './MobileMenu';
 import OffCanvasStyleOne from './OffCanvasStyleOne';
 import SearchButton from './SearchButton';
+import { useTranslation } from 'react-i18next';
+import LangSelector from '../../components/LangSelector';
 
 const HeaderThreeSticky = ({ data }) => {
   const profile = data.length > 0 ? data[0] : null;
+  const { t } = useTranslation();
+
   return (
     <div className="main-header-one__bottom">
       <div className="container-fluid">
@@ -26,23 +30,25 @@ const HeaderThreeSticky = ({ data }) => {
 
           <div className="main-header-one__bottom-right">
             {/* <div className="search-box">
-                    <SearchButton />
-                  </div>
+              <SearchButton />
+            </div>
 
-                  <div className="cart-btn">
-                    <Link to={process.env.PUBLIC_URL + `/`}>
-                      <span className="icon-shopping-bag-1"></span>
-                      <span className="count">0</span>
-                    </Link>
-                  </div> */}
+            <div className="cart-btn">
+              <Link to={process.env.PUBLIC_URL + `/`}>
+                <span className="icon-shopping-bag-1"></span>
+                <span className="count">0</span>
+              </Link>
+            </div> */}
+
+             <LangSelector />
 
             <div className="main-header-one__bottom-right-btn">
               <a
                 href="#service-one"
                 className="thm-btn"
-                data-text="Get Started +"
+                data-text={`${t('header.getStarted')} +`}
               >
-                Get Started ++
+                {t('header.getStarted')}
               </a>
             </div>
           </div>
