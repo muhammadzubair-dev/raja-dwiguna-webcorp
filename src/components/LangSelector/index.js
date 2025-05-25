@@ -11,7 +11,7 @@ const LanguageSelector = () => {
     setShowDropdown(false);
   };
 
-  const currentLang = i18n.language;
+  const currentLang = i18n.language === 'id' ? 'id' : 'en';
 
   const languages = [
     { code: 'en', label: 'EN' },
