@@ -6,7 +6,7 @@ const Nav = () => {
     const { t } = useTranslation();
     return (
         <div className="main-menu text-center">
-            <nav>
+            <nav style={{ display: 'flex' }}>
                 <ul className="main-menu__list">
                     {/* <li className="dropdown current">
                         <Link to={process.env.PUBLIC_URL + `/`}>Home</Link>

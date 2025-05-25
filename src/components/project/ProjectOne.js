@@ -4,11 +4,12 @@ import { urlFor } from '../../sanityClient';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useTranslation } from 'react-i18next';
+import { getLocalizedText } from '../../i18n';
 
 const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
   const [type, setType] = React.useState('all');
   const [projects, setProjects] = React.useState(data);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const publicUrl = process.env.PUBLIC_URL + '/';
   const count = projects.length;
 
@@ -25,7 +26,7 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
 
   const handleMouseUp = (item) => {
     if (!isDraggingRef.current) {
-      onOpenModal(item?.title, urlFor(item?.photo).url(), item?.description);
+      onOpenModal(getLocalizedText(i18n.language, item?.titleID, item?.title), urlFor(item?.photo).url(), getLocalizedText(i18n.language, item?.descriptionID, item?.description));
     }
   };
 
@@ -182,7 +183,7 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
                         whiteSpace: 'pre-wrap',
                       }}
                     >
-                      {item?.title}
+                      {getLocalizedText(i18n.language, item?.titleID, item?.title)}
                     </p>
                     <p
                       style={{
@@ -191,7 +192,7 @@ const ProjectOne = ({ data, onOpenModal, onCloseModal }) => {
                         whiteSpace: 'pre-wrap',
                       }}
                     >
-                      {item?.description}
+                       {getLocalizedText(i18n.language, item?.descriptionID, item?.description)}
                     </p>
                   </div>
                 </div>

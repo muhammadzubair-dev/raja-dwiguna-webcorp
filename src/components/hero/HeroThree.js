@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { urlFor } from '../../sanityClient';
+import { getLocalizedText } from '../../i18n';
+import { withTranslation } from 'react-i18next';
 
-export default class HeroThree extends React.Component {
+
+class HeroThree extends React.Component {
   componentDidMount() {
     const $ = window.$;
 
@@ -36,7 +39,7 @@ export default class HeroThree extends React.Component {
     }
   }
   render() {
-    const { data } = this.props;
+    const { data, i18n } = this.props;
 
     return (
       <>
@@ -55,10 +58,10 @@ export default class HeroThree extends React.Component {
                   <div className="row clearfix">
                     <div className="col-xl-12">
                       <div className="slider-one__single-content">
-                        <h3>{item.topText}</h3>
-                        <h2 style={{ whiteSpace: 'pre-wrap' }}>{item.title}</h2>
+                        <h3>{getLocalizedText(i18n.language, item?.topTextID, item?.topText)}</h3>
+                        <h2 style={{ whiteSpace: 'pre-wrap' }}>{getLocalizedText(i18n.language, item?.titleID, item?.title)}</h2>
                         <p style={{ whiteSpace: 'pre-wrap' }}>
-                          {item.description}
+                          {getLocalizedText(i18n.language, item?.descriptionID, item?.description)}
                         </p>
                       </div>
                     </div>
@@ -73,3 +76,6 @@ export default class HeroThree extends React.Component {
     );
   }
 }
+
+export default withTranslation()(HeroThree);
+

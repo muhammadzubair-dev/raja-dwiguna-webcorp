@@ -28,6 +28,10 @@ export const testimonialType = defineType({
       type: 'text',
     }),
     defineField({
+      name: 'testimonialID',
+      type: 'text',
+    }),
+    defineField({
       name: 'photo',
       title: 'Photo',
       type: 'image', // Use the image type

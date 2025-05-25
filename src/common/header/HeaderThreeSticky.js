@@ -16,9 +16,10 @@ const HeaderThreeSticky = ({ data }) => {
     <div className="main-header-one__bottom">
       <div className="container-fluid">
         <div className="main-header-one__bottom-inner">
-          <div className="main-header-one__bottom-left">
+          <div className="main-header-one__bottom-left" style={{ flex: 1 }}>
             <nav className="main-menu main-menu--1">
               <div className="main-menu__inner">
+                <LangSelector />
                 <MobileMenu data={profile} />
                 <div className="stricky-one-logo">
                   <LogoWhite />
@@ -40,7 +41,7 @@ const HeaderThreeSticky = ({ data }) => {
               </Link>
             </div> */}
 
-             <LangSelector />
+             {/* <LangSelector /> */}
 
             <div className="main-header-one__bottom-right-btn">
               <a

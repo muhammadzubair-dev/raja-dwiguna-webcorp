@@ -1,6 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 import { urlFor } from '../../sanityClient';
+import { getLocalizedText } from '../../i18n';
 
 class AboutOne extends React.Component {
   componentDidMount() {
@@ -30,7 +31,7 @@ class AboutOne extends React.Component {
     }
   }
   render() {
-    const { data, t } = this.props;
+    const { data, t, i18n } = this.props;
     const about = data.length > 0 ? data[0] : null;
 
     return (
@@ -76,8 +77,8 @@ class AboutOne extends React.Component {
                     <div className="sec-title__tagline">
                       <h6>{t('aboutCompany')} </h6> <span className="right"></span>
                     </div>
-                    <h2 className="sec-title__title">{about?.title}</h2>
-                    <p className="sec-title__text">{about?.description}</p>
+                    <h2 className="sec-title__title">{getLocalizedText(i18n.language, about?.titleID, about?.title)}</h2>
+                    <p className="sec-title__text">{getLocalizedText(i18n.language, about?.descriptionID, about?.description)}</p>
                   </div>
 
                   {/* <div className="about-one__conten-bottom"> */}

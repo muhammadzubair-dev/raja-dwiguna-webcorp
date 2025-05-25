@@ -20,3 +20,8 @@ i18n
   });
 
 export default i18n;
+
+export const getLocalizedText = (lang, textID, textEN) => {
+  return lang === 'id' ? textID : textEN;
+};
+

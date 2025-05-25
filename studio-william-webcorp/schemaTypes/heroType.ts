@@ -16,11 +16,23 @@ export const heroType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'topTextID',
+      type: 'string',
+    }),
+    defineField({
       name: 'title',
       type: 'text',
     }),
     defineField({
+      name: 'titleID',
+      type: 'text',
+    }),
+    defineField({
       name: 'description',
+      type: 'text',
+    }),
+    defineField({
+      name: 'descriptionID',
       type: 'text',
     }),
     defineField({

@@ -16,8 +16,18 @@ export const projectType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'titleID',
+      title: 'Title ID',
+      type: 'string',
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
+      type: 'text',
+    }),
+    defineField({
+      name: 'descriptionID',
+      title: 'Description ID',
       type: 'text',
     }),
     defineField({

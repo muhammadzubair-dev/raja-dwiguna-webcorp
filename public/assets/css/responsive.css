@@ -2041,3 +2041,24 @@ Update1.0
 
 
 }
+
+.lang-code {
+  display: inline-block;
+  
+}
+
+@media (max-width: 1200px) {
+  .lang-code {
+    display: none;
+  }
+}
+
+.lang-code-bar {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .lang-code-bar {
+    display: inline-block;
+  }
+}

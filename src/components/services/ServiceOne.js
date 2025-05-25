@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { urlFor } from '../../sanityClient';
 import { withTranslation } from 'react-i18next';
+import { getLocalizedText } from '../../i18n';
 
  class ServiceOne extends React.Component {
   render() {
     let publicUrl = process.env.PUBLIC_URL + '/';
-    const { data, t } = this.props;
+    const { data, t, i18n } = this.props;
     
     return (
       <>
@@ -34,14 +35,14 @@ import { withTranslation } from 'react-i18next';
                           {/* <Link
                           to={process.env.PUBLIC_URL + `/general-contracting`}
                         > */}
-                          {item.title}
+                          {getLocalizedText(i18n.language, item?.titleID, item?.title)}
                           {/* </Link> */}
                         </h2>
                       </div>
 
                       <div className="services-one__single-content-bottom">
                         <p style={{ whiteSpace: 'pre-wrap' }}>
-                          {item.description}
+                          {getLocalizedText(i18n.language, item?.descriptionID, item?.description)}
                         </p>
 
                         {/* <div className="services-one__single-btn">

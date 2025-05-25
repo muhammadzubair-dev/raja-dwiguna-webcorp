@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
+import { getLocalizedText } from '../../i18n';
 import {
   FaInstagram,
   FaFacebook,
@@ -23,7 +24,7 @@ const iconMap = {
 
 class FooterOne extends React.Component {
   render() {
-    const { data, followUs, t } = this.props;
+    const { data, followUs, t, i18n } = this.props;
     const profile = data.length > 0 ? data[0] : null;
     let publicUrl = process.env.PUBLIC_URL + '/';
     return (
@@ -73,7 +74,7 @@ class FooterOne extends React.Component {
                               className="footer-widget__about-text"
                               style={{ whiteSpace: 'pre-wrap', marginTop: 10 }}
                             >
-                              {profile?.footerText}
+                              {getLocalizedText(i18n.language, profile?.footerTextID, profile?.footerText)}
                             </p>
 
                             <p

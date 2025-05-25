@@ -15,7 +15,15 @@ export const serviceType = defineType({
       type: 'text',
     }),
     defineField({
+      name: 'titleID',
+      type: 'text',
+    }),
+    defineField({
       name: 'description',
+      type: 'text',
+    }),
+    defineField({
+      name: 'descriptionID',
       type: 'text',
     }),
     defineField({

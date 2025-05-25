@@ -4,6 +4,7 @@ import { AiOutlineBars } from 'react-icons/ai';
 import { CgChevronDown, CgChevronLeft } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { FaBars } from "react-icons/fa";
 
 const menuData = [
   { title: 'Services', href: '#service-one' },
@@ -302,9 +303,13 @@ const MobileMenu = ({ data }) => {
   return (
     <>
       <>
-        <NavIcon to="#" style={{ justifyContent: 'flex-end' }}>
+        {/* <NavIcon to="#" style={{ justifyContent: 'flex-end' }}>
           <AiOutlineBars onClick={showSidebar} />
-        </NavIcon>
+        </NavIcon> */}
+        <div className='lang-code-bar'>
+
+          <FaBars size={28}  style={{ cursor: 'pointer', marginLeft: 24 }} onClick={showSidebar} />
+        </div>
 
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>

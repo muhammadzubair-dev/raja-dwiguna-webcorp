@@ -29,5 +29,9 @@ export const profileType = defineType({
       name: 'footerText',
       type: 'text',
     }),
+    defineField({
+      name: 'footerTextID',
+      type: 'text',
+    }),
   ],
 })

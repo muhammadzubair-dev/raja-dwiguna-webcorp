@@ -1,5 +1,6 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
+import { getLocalizedText } from '../../i18n';
 import { urlFor } from '../../sanityClient';
 
 class TestimonialOne extends React.Component {
@@ -41,7 +42,7 @@ class TestimonialOne extends React.Component {
     }
   }
   render() {
-    const { data, t } = this.props;
+    const { data, t, i18n } = this.props;
     let publicUrl = process.env.PUBLIC_URL + '/';
     return (
       <>
@@ -91,7 +92,7 @@ class TestimonialOne extends React.Component {
                       </div>
                       <div className="text-box">
                         <p style={{ whiteSpace: 'pre-wrap' }}>
-                          {item?.testimonial}
+                          {getLocalizedText(i18n.language, item?.testimonialID, item?.testimonial)}
                         </p>
                       </div>
                       <div className="client-info">
